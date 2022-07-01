@@ -8,4 +8,9 @@
     background-color:pink;
   }
 
+  body {
+    background-image:url('./assets/cover.webp');
+    background-size: cover;
+  }
+
  
