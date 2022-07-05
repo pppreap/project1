@@ -6,7 +6,6 @@ $(document).ready(function() {
 
          $("#main-content").removeClass("is-hidden"); 
           
-         //const url = "https://api.quotable.io/random";
          function generateQuote(){
             fetch('https://api.quotable.io/random')
            .then(function(data) {
@@ -20,9 +19,6 @@ $(document).ready(function() {
              console.log(err); 
              });
           }
-          // Repeat generateQuote() every 10 seconds
-         setInterval(generateQuote() ,10000);
-         //Note - 10000 milliseconds = 10
         });
 
     // let currentDay = moment().format("dddd, MMMM Do YYYY")
@@ -31,7 +27,6 @@ $(document).ready(function() {
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
   
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
         $(".navbar-burger").toggleClass("is-active");
         $(".navbar-menu").toggleClass("is-active");
   
