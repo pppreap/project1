@@ -11,11 +11,6 @@
     <title>Scribe</title>
 </head>
 
-<!--<figure class="image">
-    <img class="heroimg" src="./assets/logo.png" style="height:75px; width:75px";>
-    image credit : https://www.rawpixel.com/services/licenses
-   </figure> -->
-
 <body>
   <div id="main-content" class="container is-hidden">
     <div class="block">
@@ -39,17 +34,14 @@
     <div class="block">
         <div class="columns">
             <div class="column">
-                <h1 class="title is-3 has-text-link">Todays Journal Entries</h1>
+                <h1 class="title is-3 has-text-link" id='quote'><blockquote>Journal Entries</blockquote> </h1>
+                <p class="author">-</p>
             </div>
             <div class="column has-text-right">
                 <button id="launchModal" class="button is-link">New Journal Entry</button>
             </div>
           </div>
     </div>
-
-    <!-- <div class="block has-text-centered">
-        <h1 class="title is-3 has-text-link">Todays Journal Entries</h1>
-    </div> -->
 
     <div class="block">
 
@@ -78,54 +70,8 @@
                 </article>
             </div>
         </div>
-
-        <div class="columns">
-            <div class="column">
-                <article class="message is-link">
-                    <div class="message-header">
-                        <p>Anonymous3</p>
-                    </div>
-                    <div class="message-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, maxime rerum dolorum veniam eaque amet repudiandae tenetur magnam repellat iure reiciendis, distinctio fugit harum velit quia perspiciatis aliquam repellendus asperiores?
-                    </div>
-                </article>
-            </div>
-            <div class="column">
-                <article class="message is-link">
-                    <div class="message-header">
-                        <p>Anonymous4</p>
-                    </div>
-                    <div class="message-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, maxime rerum dolorum veniam eaque amet repudiandae tenetur magnam repellat iure reiciendis, distinctio fugit harum velit quia perspiciatis aliquam repellendus asperiores?
-                    </div>
-                </article>
-            </div>
-        </div>
-
-        <div class="columns">
-            <div class="column">
-                <article class="message is-link">
-                    <div class="message-header">
-                        <p>Anonymous5</p>
-                    </div>
-                    <div class="message-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, maxime rerum dolorum veniam eaque amet repudiandae tenetur magnam repellat iure reiciendis, distinctio fugit harum velit quia perspiciatis aliquam repellendus asperiores?
-                    </div>
-                </article>
-            </div>
-            <div class="column">
-                <article class="message is-link">
-                    <div class="message-header">
-                        <p>Anonymous6</p>
-                    </div>
-                    <div class="message-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, maxime rerum dolorum veniam eaque amet repudiandae tenetur magnam repellat iure reiciendis, distinctio fugit harum velit quia perspiciatis aliquam repellendus asperiores?
-                    </div>
-                </article>
-            </div>
-        </div>
     </div>
-
+        
         <footer class="footer has-background-light">
             <div class="content has-text-centered">
               <p>
@@ -139,12 +85,7 @@
         <div class="modal">
             <div class="modal-background"></div>
             <div class="modal-content has-background-white p-4">
-                <div class="field">
-                    <label class="label">Name</label>
-                    <div class="control">
-                      <input class="input" type="text" placeholder="Text input">
-                    </div>
-                  </div>
+                
                   
                   <div class="field">
                     <label class="label">Username</label>
@@ -160,19 +101,7 @@
                     <p class="help is-success">This username is available</p>
                   </div>
                   
-                  <div class="field">
-                    <label class="label">Email</label>
-                    <div class="control has-icons-left has-icons-right">
-                      <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-envelope"></i>
-                      </span>
-                      <span class="icon is-small is-right">
-                        <i class="fas fa-exclamation-triangle"></i>
-                      </span>
-                    </div>
-                    <p class="help is-danger">This email is invalid</p>
-                  </div>
+              
                   
                   <div class="field">
                     <p class="control has-icons-left">
@@ -213,21 +142,12 @@
                       <button class="button is-link">Submit</button>
                     </div>
                     <div class="control">
-                      <button class="button is-link is-light">Cancel</button>
+                      <button class="button is-link is-light" id="cancel">Cancel</button>
                     </div>
                   </div>
             </div>
             <button class="modal-close is-large" aria-label="close"></button>
-        </div>
-
-          <!-- <div class="modal">
-            <div class="modal-background">
-                <div class="moadl-content has-background-white py-5 px-5">
-                    <h3 class="title mb-6">New Form Entry</h3>
-                </div>
-            </div>
-        </div> -->
-    
+        </div> 
 </div>
 
     <section id="hero" class="hero is-fullheight ">
@@ -245,37 +165,9 @@
       </div>
     </section>
 
-    <div id="main-content" class="block is-invisible">
-      <h1>Hello</h1>
-    </div>
-
-<!--<section class="column">
-    <div class="columns is-7">
-        <div class="column"></div>
-      </div>
-</section> -->
-
-
-
-
-<!-- <div class="navbar-end">
-    <div class="navbar-item has-dropdown">
-        <a class="navbar-link">
-          <span class="drop">Connect and Express</span>
-        </a>
-      
-        <div class="navbar-dropdown"> -->
-          <!-- Other navbar items -->
-          <!-- <a>Hello</a>
-        </div>
-      </div>
-  </div>
-</div> -->
-
 <script src="https://kit.fontawesome.com/8b0dd11356.js" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="scribe.js"></script>
 </body>
-
 
 </html>
