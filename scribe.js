@@ -1,4 +1,25 @@
 $(document).ready(function() {
+    // DOM elements
+    const quote = document.getElementById("quotes");
+    const author = document.getElementById("author");
+    async function updateQuote() {
+      // Fetch a random quote from the Quotable API
+      const response = await fetch("https://api.quotable.io/random");
+      const data = await response.json();
+      if (response.ok) {
+        // Update DOM elements
+        quote.textContent = '"'+ data.content + '"';
+        author.textContent = '-'+ data.author;
+      } else {
+        quote.textContent = "An error occured";
+        console.log(data);
+      }
+    }
+    // call updateQuote once when page loads
+    updateQuote();
+  });
+
+$(document).ready(function() {
 
     $("#launchHome").click(function() {
  
@@ -6,7 +27,7 @@ $(document).ready(function() {
 
          $("#main-content").removeClass("is-hidden"); 
           
-         function generateQuote(){
+        
             fetch('https://api.quotable.io/random')
            .then(function(data) {
                   return data.json();
@@ -18,7 +39,7 @@ $(document).ready(function() {
           .catch(function(err) {
              console.log(err); 
              });
-          }
+          
         });
 
     // let currentDay = moment().format("dddd, MMMM Do YYYY")
