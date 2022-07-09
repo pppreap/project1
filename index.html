@@ -46,13 +46,13 @@
           </div>
     </div>
 
-    <div class="block">
+    <div id="posts" class="mb-3">
 
     </div>
 
     <div class="block">
-        <div class="columns">
-            <div class="column">
+        <div class="columns is-centered">
+            <div class="column is-four-fifths">
                 <article class="message is-link">
                     <div class="message-header">
                         <p>Anonymous1</p>
@@ -60,19 +60,52 @@
                     <div class="message-body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, maxime rerum dolorum veniam eaque amet repudiandae tenetur magnam repellat iure reiciendis, distinctio fugit harum velit quia perspiciatis aliquam repellendus asperiores?
                     </div>
-                </article>
-            </div>
-            <div class="column">
-                <article class="message is-link">
-                    <div class="message-header">
-                        <p>Anonymous2</p>
-                    </div>
-                    <div class="message-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, maxime rerum dolorum veniam eaque amet repudiandae tenetur magnam repellat iure reiciendis, distinctio fugit harum velit quia perspiciatis aliquam repellendus asperiores?
-                    </div>
+                    <img src="merry.jpg" alt="Show/Hide Image" id="myImg"/>
+                    <button class='button btn1' type="button" id="btn1">Show/Hide Image</button>
                 </article>
             </div>
         </div>
+
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+              <article class="message is-link">
+                  <div class="message-header">
+                      <p>Anonymous1</p>
+                  </div>
+                  <div class="message-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, maxime rerum dolorum veniam eaque amet repudiandae tenetur magnam repellat iure reiciendis, distinctio fugit harum velit quia perspiciatis aliquam repellendus asperiores?
+                  </div>
+                  <img src="aragorn.jpg" alt="Show/Hide Image" id="myImg"/>
+                  <button class='button btn1' type="button">Show/Hide Image</button>
+              </article>
+          </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+            <article class="message is-link">
+                <div class="message-header">
+                    <p>Anonymous1</p>
+                </div>
+                <div class="message-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, maxime rerum dolorum veniam eaque amet repudiandae tenetur magnam repellat iure reiciendis, distinctio fugit harum velit quia perspiciatis aliquam repellendus asperiores?
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+          <article class="message is-link">
+              <div class="message-header">
+                  <p>Anonymous1</p>
+              </div>
+              <div class="message-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, maxime rerum dolorum veniam eaque amet repudiandae tenetur magnam repellat iure reiciendis, distinctio fugit harum velit quia perspiciatis aliquam repellendus asperiores?
+              </div>
+          </article>
+      </div>
+  </div>
     </div>
         
         <footer class="footer has-background-light" style="padding:0px">
@@ -93,41 +126,27 @@
                   <div class="field">
                     <label class="label">Username</label>
                     <div class="control has-icons-left has-icons-right">
-                      <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+                      <input id="username" class="input" type="text" placeholder="Text input">
                       <span class="icon is-small is-left">
                         <i class="fas fa-user"></i>
                       </span>
-                      <span class="icon is-small is-right">
-                        <i class="fas fa-check"></i>
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Location</label>
+                    <div class="control has-icons-left">
+                      <input id="location" class="input" type="text" placeholder="City">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-Location"></i>
                       </span>
                     </div>
-                    <p class="help is-success">This username is available</p>
-                  </div>
-                  
-              
-                  
-                  <div class="field">
-                    <p class="control has-icons-left">
-                      <span class="select">
-                        <select>
-                          <option selected>Country</option>
-                          <option>Spain</option>
-                          <option>England</option>
-                          <option>France</option>
-                          <option>Dubai</option>
-                          <option>Jamaica</option>
-                        </select>
-                      </span>
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-globe"></i>
-                      </span>
-                    </p>
                   </div>
                   
                   <div class="field">
                     <label class="label">Message</label>
                     <div class="control">
-                      <textarea class="textarea" placeholder="Textarea"></textarea>
+                      <textarea id="user-message" class="textarea" placeholder="Textarea"></textarea>
                     </div>
                   </div>
                   
@@ -142,7 +161,7 @@
                   
                   <div class="field is-grouped">
                     <div class="control">
-                      <button class="button is-link">Submit</button>
+                      <button id="submit" class="button is-link">Submit</button>
                     </div>
                     <div class="control">
                       <button class="button is-link is-light" id="cancel">Cancel</button>
