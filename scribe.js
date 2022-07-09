@@ -84,8 +84,7 @@ cancelBtn.click(function () {
 
   
   $("#submit").click(function() {
-    console.log("Clicked")
-      let userName = $('#username').val()
+    let userName = $('#username').val()
       let message = $('#user-message').val();
       
       let locationShare = $("#yesShare")
@@ -93,7 +92,7 @@ cancelBtn.click(function () {
         $.getJSON("https://api.ipify.org/?format=json", function(e) {
           let ipKey = e.ip
           $.ajax({
-            url: "http://api.positionstack.com/v1/reverse?access_key=fede56057a8e01c98e320fd27297bdfc&query=" + ipKey,
+            url: "https://api.positionstack.com/v1/reverse?access_key=fede56057a8e01c98e320fd27297bdfc&query=" + ipKey,
             method: "GET"
           }).then(function (data) {
             let location = data.data[0].locality
