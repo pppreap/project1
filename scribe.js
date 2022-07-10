@@ -78,7 +78,7 @@ $("#submit").click(function() {
     
         
   let userName = $('#username').val()
-    let message = $('#user-message').val();
+    let message = $("#user-message").val();
     let locationShare = $("#yesShare")
     if (locationShare) {
       $.getJSON("https://api.ipify.org/?format=json", function(e) {
