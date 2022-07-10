@@ -148,7 +148,6 @@ $(document).on("click", "button.btn1", function(){
 });
 
 });
-=======
 
   $("img").hide();
   // DOM elements
