@@ -1,7 +1,6 @@
-let submit = $("#submit");
-let userPosts = $("#posts")
-
 $(document).ready(function() {
+  let userPosts = $("#posts")
+
 
   $("img").hide();
   // DOM elements
@@ -24,11 +23,8 @@ $(document).ready(function() {
   }
   // call updateQuote once when page loads
   updateQuote();
-});
 
 
-
-$(document).ready(function() {
 
   $("#launchHome").click(function() {
 
@@ -73,85 +69,84 @@ $(document).ready(function() {
       $(".modal").removeClass("is-active"); 
      
     });
-});
-
-let cancelBtn = $("#cancel") 
-cancelBtn.click(function () {
-  $(".modal").removeClass("is-active")
-})
-
-
-
-  
-  $("#submit").click(function() {
-
-    $(".modal").removeClass("is-active")
-
-    let userName = $('#username').val()
-      let message = $('#user-message').val();
+    let cancelBtn = $("#cancel") 
+    cancelBtn.click(function () {
+      $(".modal").removeClass("is-active")
+    })
+    
+    
+    
       
-      let locationShare = $("#yesShare")
-      if (locationShare) {
-        $.getJSON("https://api.ipify.org/?format=json", function(e) {
-          let ipKey = e.ip
-          $.ajax({
-            url: "http://api.positionstack.com/v1/reverse?access_key=fede56057a8e01c98e320fd27297bdfc&query=" + ipKey,
-            method: "GET"
-          }).then(function (data) {
-            let location = data.data[0].locality
-            $.ajax({
-              url: `https://api.unsplash.com/search/photos?query=${location}&client_id=t8900iGRKbL5Z9ERoHrnwFsvAjDAjoOf9FCmiRtrp2g`,
-              success: function(data){ 
-                  console.log(data)
-                  let iconUrl = data.results[0].urls.small
-                  $('#icon').attr('src', iconUrl)
-                  postUserMessage(iconUrl)
-              },
-              error: function(){
-                  alert("There was an error.");
-              }
-          });
-          
-              function postUserMessage(iconUrl) {
-                userPosts.prepend(`
-                <div class="columns is-centered">
-                  <div class="column is-four-fifths">
-                      <article class="message is-link">
-                          <div class="message-header">
-                              <p class='li'>${userName}</p>
-                              <p class='li'>${location}</p>
-                          </div>
-                          <div class="message-body">
-                             ${message}
-                          </div>
-                          <img src=${iconUrl} alt="Show/Hide Image" id="myImg"/>
-                          <br>
-                          <button class='button btn1 mt-2' type="button">Show/Hide Image</button>
-                      </article>
+      $("#submit").click(function() {
+    
+        
+        let userName = $('#username').val()
+          let message = $('#user-message').val();
+          let locationShare = $("#yesShare")
+          if (locationShare) {
+            $.getJSON("https://api.ipify.org/?format=json", function(e) {
+              let ipKey = e.ip
+              console.log(e)
+              $.ajax({
+                url: "https://ipgeolocation.abstractapi.com/v1/?api_key=a68b984c68ff42ccaaca88c63e8a1668&ip_address=" + ipKey,
+                method: "GET"
+              }).then(function (data) {
+                console.log(data)
+                let location = data.city
+                $.ajax({
+                  url: `https://api.unsplash.com/search/photos?query=${location}&client_id=t8900iGRKbL5Z9ERoHrnwFsvAjDAjoOf9FCmiRtrp2g`,
+                  success: function(data){ 
+                      console.log(data)
+                      let iconUrl = data.results[0].urls.small
+                      $('#icon').attr('src', iconUrl)
+                      postUserMessage(iconUrl)
+                  },
+                  error: function(){
+                    alert("There was an error.");
+                  }
+              });
+              
+                  function postUserMessage(iconUrl) {
+                    userPosts.prepend(`
+                    <div class="columns is-centered">
+                    <div class="column is-four-fifths">
+                          <article class="message is-link">
+                              <div class="message-header">
+                                  <p class='li'>${userName}</p>
+                                  <p class='li'>${location}</p>
+                                  </div>
+                                  <div class="message-body">
+                                  ${message}
+                              </div>
+                              <img src=${iconUrl} alt="Show/Hide Image" id="myImg"/>
+                              <br>
+                              <button class='button btn1 mt-2' type="button">Show/Hide Image</button>
+                              </article>
+                              </div>
                   </div>
-              </div>
-                `)
-  
-  
-        $("img").hide();
-  
-        sessionStorage.setItem("userInputs", $("#posts").html())
-  
-        $(".modal").removeClass("is-active"); 
+                    `)
+      
+      
+                    $("img").hide();
+                    
+                    sessionStorage.setItem("userInputs", $("#posts").html())
+                    
+                    $(".modal").removeClass("is-active")
+                  }
+                })
+              });
+    
       }
-          })
-        });
-
-  }
-
-
-  let saved = sessionStorage.getItem('userInputs')
-
-  userPosts.prepend(saved)
-
-  $(document).on("click", "button.btn1", function(){
-    $(this).siblings("img").toggle("slow")
+    
+    
+      let saved = sessionStorage.getItem('userInputs')
+    
+      userPosts.prepend(saved)
+    
+      $(document).on("click", "button.btn1", function(){
+        $(this).siblings("img").toggle("slow")
+    });
+    
+    
+    })
 });
-
-
-})
