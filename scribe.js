@@ -139,7 +139,7 @@ $(document).ready(function() {
       }
     
     
-      let saved = sessionStorage.getItem('userInputs')
+      let saved = sessionStorage.getItem("userInputs")
     
       userPosts.prepend(saved)
     
