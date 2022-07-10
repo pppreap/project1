@@ -80,7 +80,7 @@ $(document).ready(function() {
       $("#submit").click(function() {
     
         
-        let userName = $('#username').val()
+        let userName = $("#username").val()
           let message = $('#user-message').val();
           let locationShare = $("#yesShare")
           if (locationShare) {
