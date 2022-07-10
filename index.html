@@ -60,7 +60,7 @@
                     <div class="message-body">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, maxime rerum dolorum veniam eaque amet repudiandae tenetur magnam repellat iure reiciendis, distinctio fugit harum velit quia perspiciatis aliquam repellendus asperiores?
                     </div>
-                    <img src="merry.jpg" alt="Show/Hide Image" id="myImg"/>
+                    <img src="merry.jpg" alt="Show/Hide Image" id="myImg1"/>
                     <button class='button btn1' type="button" id="btn1">Show/Hide Image</button>
                 </article>
             </div>
@@ -75,7 +75,7 @@
                   <div class="message-body">
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, maxime rerum dolorum veniam eaque amet repudiandae tenetur magnam repellat iure reiciendis, distinctio fugit harum velit quia perspiciatis aliquam repellendus asperiores?
                   </div>
-                  <img src="aragorn.jpg" alt="Show/Hide Image" id="myImg"/>
+                  <img src="aragorn.jpg" alt="Show/Hide Image" id="myImg3"/>
                   <button class='button btn1' type="button">Show/Hide Image</button>
               </article>
           </div>
@@ -133,15 +133,14 @@
                     </div>
                   </div>
 
-                  <div class="field">
+                  <div class="field" id="localSelect">
                     <label class="label">Location</label>
-                    <div class="control has-icons-left">
-                      <input id="location" class="input" type="text" placeholder="City">
-                      <span class="icon is-small is-left">
-                        <i class="fas fa-Location"></i>
-                      </span>
-                    </div>
+                    <input type="radio" id="yesShare" name="shareLocation" value="yes">
+                    <label for="yesShare">Share Location</label><br>
+                    <input type="radio" id="noShare" name="shareLocation" value="no">
+                    <label for="noShare">Don't Share</label>
                   </div>
+          
                   
                   <div class="field">
                     <label class="label">Message</label>
@@ -150,21 +149,13 @@
                     </div>
                   </div>
                   
-                  <div class="field">
-                    <div class="control">
-                      <label class="checkbox">
-                        <input type="checkbox">
-                        I agree to the <a href="#">terms and conditions</a>
-                      </label>
-                    </div>
-                  </div>
                   
                   <div class="field is-grouped">
                     <div class="control">
                       <button id="submit" class="button is-link">Submit</button>
                     </div>
                     <div class="control">
-                      <button class="button is-link is-light" id="cancel">Cancel</button>
+                      <button class="button is-link" id="cancel">Cancel</button>
                     </div>
                   </div>
             </div>
@@ -175,7 +166,6 @@
     <section id="hero" class="hero is-medium ">
         <div class="hero-body">
         <div class="column has-text-centered">
-         <!--<p class="title is-1 has-text-white">Scribe-->
           <p class="title has-text-white glow"> Scribe .
           <span class="icon"><i class="fa-solid fa-square-pen"></i></span></p><p id="quotes"></p><p id="author"></p>
         </div>
