@@ -3,6 +3,7 @@ $(document).ready(function() {
 
 
   $("img").hide();
+
   // DOM elements
   const quote = document.getElementById("quotes");
   const author = document.getElementById("author");
@@ -21,18 +22,19 @@ $(document).ready(function() {
       console.log(data);
     }
   }
+
   // call updateQuote once when page loads
   updateQuote();
 
 
-
+//Opens the main page
   $("#launchHome").click(function() {
 
        $("#hero").addClass("is-hidden"); 
 
        $("#main-content").removeClass("is-hidden"); 
         
-      
+      //Using the Quotable API again
           fetch('https://api.quotable.io/random')
          .then(function(data) {
                 return data.json();
@@ -47,27 +49,14 @@ $(document).ready(function() {
         
       });
 
-  // let currentDay = moment().format("dddd, MMMM Do YYYY")
-  // $("#currentDay").text(currentDay)
-
-  // Check for click events on the navbar burger icon
-  $(".navbar-burger").click(function() {
-
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
-
-  });
-
+      //Adds listener to "New Post" button for user name and entry
   $("#launchModal").click(function() {
-
       $(".modal").addClass("is-active"); 
-     
     });
 
+    //Allows user to close modal with cancel button or close "X"
   $(".modal-close").click(function() {
-
       $(".modal").removeClass("is-active"); 
-     
     });
     let cancelBtn = $("#cancel") 
     cancelBtn.click(function () {
@@ -75,24 +64,23 @@ $(document).ready(function() {
     })
     
     
-    
-      
+    //After user inputs grabs IP and generates a picture related to city name
       $("#submit").click(function() {
-    
-        
         let userName = $("#username").val()
           let message = $('#user-message').val();
-          let locationShare = $("#yesShare")
-          if (locationShare) {
+
+          //Grabs IP 
             $.getJSON("https://api.ipify.org/?format=json", function(e) {
               let ipKey = e.ip
               console.log(e)
+              //Uses IP to grab geodata
               $.ajax({
                 url: "https://ipgeolocation.abstractapi.com/v1/?api_key=a68b984c68ff42ccaaca88c63e8a1668&ip_address=" + ipKey,
                 method: "GET"
               }).then(function (data) {
                 console.log(data)
                 let location = data.city
+                //Uses location to generate a random picture 
                 $.ajax({
                   url: `https://api.unsplash.com/search/photos?query=${location}&client_id=t8900iGRKbL5Z9ERoHrnwFsvAjDAjoOf9FCmiRtrp2g`,
                   success: function(data){ 
@@ -106,6 +94,7 @@ $(document).ready(function() {
                   }
               });
               
+              //Adds all collected input and displays to the page
                   function postUserMessage(iconUrl) {
                     userPosts.prepend(`
                     <div class="columns is-centered">
@@ -126,17 +115,12 @@ $(document).ready(function() {
                   </div>
                     `)
       
-      
                     $("img").hide();
-                    
                     sessionStorage.setItem("userInputs", $("#posts").html())
-                    
                     $(".modal").removeClass("is-active")
                   }
                 })
               });
-    
-      }
     
     
       let saved = sessionStorage.getItem("userInputs")
