@@ -8,9 +8,9 @@ p.title {
 }
 
 .is-light {
-  font-size: 30px;
+  font-size: 28px;
   font-family:'Splash', cursive;
-  font-weight: 300;
+  font-weight: 250;
 
 }
 #headline {
@@ -39,4 +39,17 @@ p.title {
     }
   }
 
- 
+  .btn1 {
+    color:#ff4da6;
+    border-radius:10px;
+    font-size: 10px;
+    background-color: whitesmoke;
+  }
+
+.is-large-text-centered {
+  border-radius: 5px;
+}
+
+.footer {
+  border-radius: 5px;
+}
