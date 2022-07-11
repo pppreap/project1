@@ -46,4 +46,10 @@ p.title {
     background-color: whitesmoke;
   }
 
- 
+.is-large-text-centered {
+  border-radius: 5px;
+}
+
+.footer {
+  border-radius: 5px;
+}
