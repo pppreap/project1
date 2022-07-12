@@ -79,7 +79,7 @@ $(document).ready(function() {
                 method: "GET"
               }).then(function (data) {
                 console.log(data)
-                let location = data.city
+                let location = data.city + " , " + data.region
                 //Uses location to generate a random picture 
                 $.ajax({
                   url: `https://api.unsplash.com/search/photos?query=${location}&client_id=t8900iGRKbL5Z9ERoHrnwFsvAjDAjoOf9FCmiRtrp2g`,
