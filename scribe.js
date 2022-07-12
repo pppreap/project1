@@ -122,7 +122,7 @@ $(document).ready(function() {
                 })
               });
     
-    
+      })
       let saved = sessionStorage.getItem("userInputs")
     
       userPosts.prepend(saved)
@@ -130,7 +130,4 @@ $(document).ready(function() {
       $(document).on("click", "button.btn1", function(){
         $(this).siblings("img").toggle("slow")
     });
-    
-    
-    })
 });
