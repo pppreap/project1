@@ -1,6 +1,6 @@
 # Project 1// Group 5: Building An App with APIs 
 
-Using APIs, HTML, CSS, and Javascript, aa online post application will be created that allow users to see other user's day experience and traveling stories. This application will run in the browser.
+Using APIs, HTML, CSS, and Javascript, a online post application will be created that allow users to see other user's day experience and traveling stories. This application will run in the browser.
 Link to [Application]:(https://pppreap.github.io/project1/)
 
 # User Story for Scribe
@@ -15,7 +15,7 @@ An user wants to be able to view posts on other users' travels and daily thought
 There will be a post entry with **form inputs**. 
 
 WHEN  the user **view each post** for that day,
-THEN  the user is  **presented with the username, possible location/image and daily travel/day posts.** 
+THEN  the user is  **presented with the username,  location/image and daily travel/day posts.** 
 
 When the user view the **start page and the main page**,
 an **inpsirational quote** is displayed on the page.
@@ -31,7 +31,7 @@ the user is able to **view the hidden image.**
 These are images of the working application.
 ![Start of the application](./assets/startpg.png)
 ![Saved Posts](./assets/post.png)
-![Click New Ppost](./assets/newpost.png)
+![Click New Post](./assets/newpost.png)
 ![Show/Hide Image](./assets/show%3Ahideimage.png)
 
 #### Links
