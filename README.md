@@ -7,7 +7,7 @@ Link to [Application]:(https://pppreap.github.io/project1/)
 
 An user wants to be able to view posts on other users' travels and daily thoughts. Scribe will be a place to share your daily thoughts and travels. How was your day? Do you want to share your experiences and connect with others? Post away on Scribe!
 
-Group Presentation Slides: (https://docs.google.com/presentation/d/1RfY3pUckjxYQyIrMuEf0TLjdz_GlxldEFL-y3bWdzfA/edit?usp=sharing)
+Group Presentation Slides:(https://docs.google.com/presentation/d/1RfY3pUckjxYQyIrMuEf0TLjdz_GlxldEFL-y3bWdzfA/edit?usp=sharing)
 
 
 ## Criteria
