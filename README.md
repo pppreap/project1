@@ -21,7 +21,7 @@ THEN  the user is  **presented with the username,  location/image and daily trav
 
 When the user view the **start page and the main page**,
 an **inpsirational quote** is displayed on the page.
-
+add
 When the **user clicks new post**,
 the user is able to **share their location and post to the page.**
 
