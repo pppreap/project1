@@ -1,6 +1,6 @@
 # Project 1// Group 5: Building An App with APIs 
 
-Using APIs, HTML, CSS, and Javascript, a online post application will be created that allow users to see other user's day experience and traveling stories. This application will run in the browser.
+Using APIs, HTML, CSS Framework: Bulma, and Javascript, a online post application will be created that allow users to see other user's day experience and traveling stories. This application will run in the browser.
 Link to [Application]:(https://pppreap.github.io/project1/)
 
 # User Story for Scribe
@@ -11,6 +11,8 @@ An user wants to be able to view posts on other users' travels and daily thought
 ## Criteria
 
 **You will need to run this application in a browser.**
+
+**Technologies Used: JQuery, Bulma, FontAwesome, GoogleFonts, Quotable API, Unsplash API, ipify API, ipgeolocation API, Javascript**
 
 There will be a post entry with **form inputs**. 
 
